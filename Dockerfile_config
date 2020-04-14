@@ -1,0 +1,11 @@
+FROM ubuntu:18.04
+USER root
+
+ADD resource/config.sh /config.sh
+ADD resource/config.py /config.py
+ADD resource/datafill.sql /datafill.sql
+ADD requirements_config.txt /requirements_config.txt
+RUN chmod +x /config.sh 
+
+
+CMD ["bash", "-c", "echo 1 && bash /config.sh"]

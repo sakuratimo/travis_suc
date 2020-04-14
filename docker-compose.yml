@@ -1,0 +1,61 @@
+version: '2'
+services:
+  mariadb:
+    image: 'bitnami/mariadb:10.3'
+    environment:
+      - MARIADB_USER=bn_opencart
+      - MARIADB_DATABASE=bitnami_opencart
+      - ALLOW_EMPTY_PASSWORD=yes
+    container_name: web-database
+    volumes:
+      - 'mariadb_data:/bitnami'
+  
+  
+  opencart:
+    image: 'bitnami/opencart:3.0.3-2'
+    environment:
+      - MARIADB_HOST=mariadb
+      - MARIADB_PORT_NUMBER=3306
+      - OPENCART_DATABASE_USER=bn_opencart
+      - OPENCART_DATABASE_NAME=bitnami_opencart
+      - OPENCART_HOST=opencart
+      - ALLOW_EMPTY_PASSWORD=yes
+    container_name: web-app
+    ports:
+      - '80:80'
+      - '443:443'
+    volumes:
+      - 'opencart_data:/bitnami'
+      - "./resource/datafile:/bitnami/opencart/image/catalog/datafile"
+      - "./resource/zhadmin/zh-cn:/opt/bitnami/opencart/admin/language/zh-cn"
+      - "./resource/zhcus/zh-cn:/opt/bitnami/opencart/catalog/language/zh-cn"
+      - "./resource/datafile/logo.png:/opt/bitnami/opencart/admin/view/image/logo.png"   
+    depends_on:
+      - mariadb
+
+
+
+  config:  
+    build:
+      context: .
+      dockerfile:  Dockerfile_config
+    container_name: config-app
+    depends_on:
+      - opencart
+    
+
+
+  poc:
+    build:
+      context: .
+      dockerfile: Dockerfile_poc
+    container_name: poc-app
+    depends_on:
+      - opencart
+    
+
+volumes:
+  mariadb_data:
+    driver: local
+  opencart_data:
+    driver: local
