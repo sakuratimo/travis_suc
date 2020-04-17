@@ -22,7 +22,7 @@ install:
   - sleep ${SLEEP_TIME}
   
 script:
-   # - sudo bash check_config.sh 
+    - sudo bash check_config.sh 
     - sudo bash check_poc.sh  
     - sudo cat /etc/hosts
     - curl -vv -L http://${DOMAIN_NAME}:${PORT}
