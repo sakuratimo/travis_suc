@@ -11,7 +11,7 @@ services:
       - 'mariadb_data:/bitnami'
   
   
-  web:
+  opencart:
     image: 'bitnami/opencart:3.0.3-2'
     environment:
       - MARIADB_HOST=mariadb
@@ -39,7 +39,7 @@ services:
       dockerfile:  Dockerfile_config
     container_name: config-app
     depends_on:
-      - web  
+      - opencart  
 
 
   # poc:
