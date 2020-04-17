@@ -42,14 +42,14 @@ services:
       - opencart  
 
 
-  # poc:
-  #   build:
-  #     context: .
-  #     dockerfile: Dockerfile_poc
-  #   container_name: poc-app
-  #   depends_on:
-  #     - opencart
-  #     - config
+  poc:
+    build:
+      context: .
+      dockerfile: Dockerfile_poc
+    container_name: poc-app
+    depends_on:
+      - opencart
+      - config
 
   
 
