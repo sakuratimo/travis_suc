@@ -3,7 +3,7 @@ services:
     - docker
 
 env:
-    - DOCKER_COMPOSE_VERSION="1.25.4" SLEEP_TIME=40 PORT=8080 DOMAIN_NAME="opencart66.com"
+    - DOCKER_COMPOSE_VERSION="1.25.4" SLEEP_TIME=50 PORT=8080 DOMAIN_NAME="opencart66.com"
 
 before_install:
   - sudo rm /usr/local/bin/docker-compose
