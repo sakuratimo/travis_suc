@@ -81,7 +81,7 @@ if __name__ == "__main__":
     print(adcookies)
     print(adtoken)   
     addfile()
-    n1=setfile()
+    # n1=setfile()
     # n2=setdownload()
     # print("poc run ")
     
