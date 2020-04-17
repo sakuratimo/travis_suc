@@ -11,14 +11,14 @@ services:
       - 'mariadb_data:/bitnami'
   
   
-  opencart:
+  web:
     image: 'bitnami/opencart:3.0.3-2'
     environment:
       - MARIADB_HOST=mariadb
       - MARIADB_PORT_NUMBER=3306
       - OPENCART_DATABASE_USER=bn_opencart
       - OPENCART_DATABASE_NAME=bitnami_opencart
-      - OPENCART_HOST=opencart
+      - OPENCART_HOST=opencart66.com
       - ALLOW_EMPTY_PASSWORD=yes
     container_name: web-app
     ports:
@@ -41,17 +41,17 @@ services:
       dockerfile:  Dockerfile_config
     container_name: config-app
     depends_on:
-      - opencart
+      - web
     
 
 
-  poc:
-    build:
-      context: .
-      dockerfile: Dockerfile_poc
-    container_name: poc-app
-    depends_on:
-      - opencart
+  # poc:
+  #   build:
+  #     context: .
+  #     dockerfile: Dockerfile_poc
+  #   container_name: poc-app
+  #   depends_on:
+  #     - opencart
     
 
 volumes:

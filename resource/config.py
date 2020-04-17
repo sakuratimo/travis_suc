@@ -5,7 +5,7 @@ from requests_toolbelt.multipart.encoder import MultipartEncoder
 requests.packages.urllib3.disable_warnings()
 #path = os.path.abspath(os.path.dirname(sys.argv[0]))
 path = './/'
-host="opencart"
+host="web"
 
 def loginad():
    burp0_url = "https://"+host+":443/admin/index.php?route=common/login"

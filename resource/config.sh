@@ -7,9 +7,6 @@
 # deb http://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-backports main restricted universe multiverse
 # deb http://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-security main restricted universe multiverse
 # EOF
-
-
-
 apt update
 apt install python3.6 -y
 apt install python3-pip -y
