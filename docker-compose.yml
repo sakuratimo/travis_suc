@@ -1,7 +1,7 @@
 version: '2'
 services:
   mariadb:
-    image: 'bitnami/mariadb:10.3'
+    image: 'registry.cn-hangzhou.aliyuncs.com/opencart3_0_3_2/opencart3:opencart_mariadb_10.3'
     environment:
       - MARIADB_USER=bn_opencart
       - MARIADB_DATABASE=bitnami_opencart
@@ -12,7 +12,7 @@ services:
   
   
   web:
-    image: 'bitnami/opencart:3.0.3-2'
+    image: 'registry.cn-hangzhou.aliyuncs.com/opencart3_0_3_2/opencart3:opencart'
     environment:
       - MARIADB_HOST=mariadb
       - MARIADB_PORT_NUMBER=3306
@@ -33,16 +33,13 @@ services:
     depends_on:
       - mariadb
 
-
-
   config:  
     build:
       context: .
       dockerfile:  Dockerfile_config
     container_name: config-app
     depends_on:
-      - web
-    
+      - web  
 
 
   # poc:
@@ -52,7 +49,10 @@ services:
   #   container_name: poc-app
   #   depends_on:
   #     - opencart
-    
+  #     - config
+
+  
+
 
 volumes:
   mariadb_data:
