@@ -6,6 +6,4 @@ ADD resource/config.py /config.py
 ADD resource/datafill.sql /datafill.sql
 ADD requirements_config.txt /requirements_config.txt
 RUN chmod +x /config.sh 
-
-
 CMD ["bash", "-c", "echo 1 && bash /config.sh"]
