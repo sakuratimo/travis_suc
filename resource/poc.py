@@ -97,9 +97,10 @@ def addcart(cus_cookies):
     burp0_headers = {"Origin": "http://"+host+"", "Referer": "http://"+host+"/index.php?route=product/category&path=20_27", "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Safari/537.36 Edge/18.17763", "Cache-Control": "max-age=0", "Accept": "application/json, text/javascript, */*; q=0.01", "Accept-Language": "en-US,en;q=0.8,zh-Hans-CN;q=0.5,zh-Hans;q=0.3", "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8", "X-Requested-With": "XMLHttpRequest", "Accept-Encoding": "gzip, deflate", "Pragma": "no-cache", "Connection": "close"}
     burp0_data = {"product_id": "41", "quantity": "1"}
     r=requests.post(burp0_url, headers=burp0_headers, cookies=burp0_cookies, data=burp0_data,verify=False)
+    print("addcart")
    
 
-def checkout():
+def checkout(cus_cookies):
     burp0_url = "https://"+host+":443//index.php?route=checkout/checkout"
     burp0_cookies = {"OCSESSID": cus_cookies, "__atuvc": "1%7C12", "currency": "EUR", "language": "en-gb"}
     burp0_headers = {"Referer": "https://"+host+"/index.php?route=checkout/cart", "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8", "Accept-Language": "en-US,en;q=0.8,zh-Hans-CN;q=0.5,zh-Hans;q=0.3", "Upgrade-Insecure-Requests": "1", "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Safari/537.36 Edge/18.17763", "Accept-Encoding": "gzip, deflate", "Connection": "close"}
@@ -207,7 +208,9 @@ def checkout():
 
     burp0_url = "http://"+host+":80/index.php?route=checkout/success"
     burp0_headers = {"Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8", "Accept-Language": "en-US,en;q=0.8,zh-Hans-CN;q=0.5,zh-Hans;q=0.3", "Upgrade-Insecure-Requests": "1", "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Safari/537.36 Edge/18.17763", "Accept-Encoding": "gzip, deflate", "Connection": "close"}
-    requests.get(burp0_url, headers=burp0_headers, cookies=burp0_cookies,verify=False)
+    r=requests.get(burp0_url, headers=burp0_headers, cookies=burp0_cookies,verify=False)
+    print(r.status_code)
+    print("checkout")
 
 def download():
     burp0_url = "https://"+host+":443//index.php?route=account/download/download&download_id=1"
@@ -239,7 +242,7 @@ if __name__ == "__main__":
     register(adcookies,adtoken)
     cus_cookies=logincus()
     addcart(cus_cookies)
-    # checkout()
+    checkout(cus_cookies)
     # r_check=download()
     # result=check_poc(r_check)
     # exit(result)
