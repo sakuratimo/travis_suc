@@ -67,33 +67,19 @@ def setfile(adcookies,adtoken):
     return set1
 
 
+   
+
 
 def register():
     burp0_url = "https://"+host+":443//index.php?route=account/register"
-    burp0_cookies = {"OCSESSID": adcookies, "__atuvc": "1%7C12", "currency": "EUR", "language": "en-gb"}
-    burp0_headers = {"Referer": "https://"+host+"/index.php?route=account/register", 
-    "Cache-Control": "max-age=0",
-    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
-    "Accept-Language": "en-US,en;q=0.8,zh-Hans-CN;q=0.5,zh-Hans;q=0.3", 
-    "Content-Type": "multipart/form-data; boundary=---------------------------7e4183162b02e8", 
-    "Upgrade-Insecure-Requests": "1", 
-    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Safari/537.36 Edge/18.17763",
-    "Accept-Encoding": "gzip, deflate", 
-    "Connection": "close"}
+    burp0_headers = {"Referer": "https://"+host+"/index.php?route=account/register","Cache-Control": "max-age=0","Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8","Accept-Language": "en-US,en;q=0.8,zh-Hans-CN;q=0.5,zh-Hans;q=0.3","Content-Type": "multipart/form-data; boundary=---------------------------7e4183162b02e8","Upgrade-Insecure-Requests": "1","User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Safari/537.36 Edge/18.17763","Accept-Encoding": "gzip, deflate", "Connection": "close"}
     burp0_data = "-----------------------------7e4183162b02e8\r\nContent-Disposition: form-data; name=\"customer_group_id\"\r\n\r\n1\r\n-----------------------------7e4183162b02e8\r\nContent-Disposition: form-data; name=\"firstname\"\r\n\r\nx\r\n-----------------------------7e4183162b02e8\r\nContent-Disposition: form-data; name=\"lastname\"\r\n\r\nx\r\n-----------------------------7e4183162b02e8\r\nContent-Disposition: form-data; name=\"email\"\r\n\r\n1@qq.com\r\n-----------------------------7e4183162b02e8\r\nContent-Disposition: form-data; name=\"telephone\"\r\n\r\n123213\r\n-----------------------------7e4183162b02e8\r\nContent-Disposition: form-data; name=\"password\"\r\n\r\n1234\r\n-----------------------------7e4183162b02e8\r\nContent-Disposition: form-data; name=\"confirm\"\r\n\r\n1234\r\n-----------------------------7e4183162b02e8\r\nContent-Disposition: form-data; name=\"newsletter\"\r\n\r\n0\r\n-----------------------------7e4183162b02e8\r\nContent-Disposition: form-data; name=\"agree\"\r\n\r\n1\r\n-----------------------------7e4183162b02e8--\r\n"
-    r=requests.post(burp0_url, headers=burp0_headers,cookies=burp0_cookies,data=burp0_data,verify=False)
+    r=requests.post(burp0_url, headers=burp0_headers,  data=burp0_data,verify=False)
+    print("register finsh")
   
-def logincus():
-    
+def logincus():   
     burp0_url = "https://"+host+":443//index.php?route=account/login"
-    burp0_headers = {"Referer": "https://"+host+"/index.php?route=account/login", 
-    "Cache-Control": "max-age=0", 
-    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8", 
-    "Accept-Language": "en-US,en;q=0.8,zh-Hans-CN;q=0.5,zh-Hans;q=0.3", 
-    "Content-Type": "multipart/form-data; boundary=---------------------------7e43a11530a14", 
-    "Upgrade-Insecure-Requests": "1", "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Safari/537.36 Edge/18.17763", 
-    "Accept-Encoding": "gzip, deflate", 
-    "Connection": "close"}
+    burp0_headers = {"Referer": "https://"+host+"/index.php?route=account/login","Cache-Control": "max-age=0","Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8","Accept-Language": "en-US,en;q=0.8,zh-Hans-CN;q=0.5,zh-Hans;q=0.3","Content-Type": "multipart/form-data; boundary=---------------------------7e43a11530a14","Upgrade-Insecure-Requests": "1", "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Safari/537.36 Edge/18.17763","Accept-Encoding": "gzip, deflate","Connection": "close"}
     burp0_data = "-----------------------------7e43a11530a14\r\nContent-Disposition: form-data; name=\"email\"\r\n\r\n1@qq.com\r\n-----------------------------7e43a11530a14\r\nContent-Disposition: form-data; name=\"password\"\r\n\r\n1234\r\n-----------------------------7e43a11530a14--\r\n"
     r=requests.post(burp0_url, headers=burp0_headers, data=burp0_data,verify=False)
     cus_cookies=r.cookies['OCSESSID']
