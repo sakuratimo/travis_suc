@@ -1,13 +1,13 @@
 import requests
 #import os
-#import sys
+import sys
 from requests_toolbelt.multipart.encoder import MultipartEncoder
 requests.packages.urllib3.disable_warnings()
 #path = os.path.abspath(os.path.dirname(sys.argv[0]))
 path = './/'
-host = "opencart"
 
-def loginad():
+
+def loginad(host):
    burp0_url = "https://"+host+":443/admin/index.php?route=common/login"
    burp0_headers = {"Referer": "https://"+host+"/admin/", 
    "Cache-Control": "max-age=0", 
@@ -45,7 +45,7 @@ def loginad():
 
 
 
-def adddatefile():
+def adddatefile(host):
     filename='datafill.sql'
     filepath=path+'//datafill.sql'
     multipart_encoder = MultipartEncoder(
@@ -72,7 +72,7 @@ def adddatefile():
 
 
 
-def sure():
+def sure(host):
     burp0_url = "https://"+host+":443/admin/index.php?route=tool/backup/import&user_token="+adtoken+"&import=/bitnami/"+host+"/system/storage/upload/"+datetoken+"&position=8688"
     burp0_cookies = {"__atuvc": "1%7C12%2C0%7C13%2C1%7C14", "currency": "USD", "language": "zh-cn", "OCSESSID": adcookies}
     burp0_headers = {"Referer": "https://"+host+"/admin/index.php?route=tool/backup&user_token="+adtoken, "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Safari/537.36 Edge/18.17763", "Accept": "application/json, text/javascript, */*; q=0.01", "Accept-Language": "en-US,en;q=0.8,zh-Hans-CN;q=0.5,zh-Hans;q=0.3", "X-Requested-With": "XMLHttpRequest", "Accept-Encoding": "gzip, deflate", "Connection": "close"}
@@ -353,7 +353,7 @@ def sure():
     #print(r.text)
     #print(r)
 
-def check_config():
+def check_config(host):
     burp0_url = "http://" + host + ":80"
     burp0_cookies = {"language": "zh-cn", "currency": "rmb"}
     burp0_headers = {"Upgrade-Insecure-Requests": "1",
@@ -367,14 +367,15 @@ def check_config():
     return r
 
 if __name__ == "__main__":
-    result1 = check_config()
-    n=loginad()
+    h = sys.argv[1]
+    result1 = check_config(h)
+    n=loginad(h)
     adcookies=n['cookies']
     adtoken=n['token']
-    m=adddatefile()
+    m=adddatefile(h)
     datetoken=m['datetoken']
-    sure()
-    result2 = check_config()
+    sure(h)
+    result2 = check_config(h)
 
     target_info = '中国移动电子商场'
 

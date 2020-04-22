@@ -14,5 +14,5 @@ pip3 install -r /requirements_config.txt
 #echo 'Requests addon installed'
 chmod +x /config.py
 #echo 'ready to run config.py'
-python3 /config.py
+python3 /config.py  opencart
 #echo 'config.py executed'
