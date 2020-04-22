@@ -40,6 +40,8 @@ services:
       context: .
       dockerfile:  Dockerfile_config
     container_name: config-app
+    environment: 
+      - PYTHONIOENCODING=utf-8
     depends_on:
       - web  
 
@@ -49,6 +51,8 @@ services:
       context: .
       dockerfile:  Dockerfile_poc
     container_name: poc-app
+    environment: 
+      - PYTHONIOENCODING=utf-8
     depends_on:
       - web
       - config
