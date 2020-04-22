@@ -12,7 +12,7 @@ services:
       - 'mariadb_data:/bitnami'
   
   
-  web:
+  opencart:
     image: 'bitnami/opencart:3.0.3-2'
     #image: 'registry.cn-hangzhou.aliyuncs.com/opencart3_0_3_2/opencart3:opencart'
     environment:
@@ -43,7 +43,7 @@ services:
     environment: 
       - PYTHONIOENCODING=utf-8
     depends_on:
-      - web  
+      - opencart  
 
 
   poc:
