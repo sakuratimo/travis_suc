@@ -54,7 +54,7 @@ services:
     environment: 
       - PYTHONIOENCODING=utf-8
     depends_on:
-      - web
+      - opencart
       - config
     
 
