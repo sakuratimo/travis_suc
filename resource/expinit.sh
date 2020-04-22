@@ -20,7 +20,7 @@ chmod +x /exp.py
 #echo 'exp.py executed'
 #echo 'Permission of exp.py granted'
 #echo 'ready to run exp.py'
-python3 /poc.py
+python3 /poc.py  web
 #echo 'exp.py executed'
 
 
