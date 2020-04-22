@@ -4,7 +4,7 @@ import requests
 from requests_toolbelt.multipart.encoder import MultipartEncoder
 requests.packages.urllib3.disable_warnings()
 #path = os.path.abspath(os.path.dirname(sys.argv[0]))
-path = '../resource/'
+path = './'
 host = "web"
 
 def loginad():
