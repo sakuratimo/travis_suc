@@ -1,7 +1,7 @@
 import requests
 import urllib3
 requests.packages.urllib3.disable_warnings()
-host = "opencart"
+host = "web"
 
 def loginad():
     session = requests.session()
@@ -12,8 +12,8 @@ def loginad():
     location=res.headers['location']
     cookies=res.cookies['OCSESSID']
     token=location[-32:]
-    print(cookies)
-    print(token)
+    #print(cookies)
+    #print(token)
     return  cookies,token,session
     # r=requests.post(burp0_url, headers=burp0_headers,  data=burp0_data,verify=False)
 #cookies=r.cookies.get_dict()
@@ -47,7 +47,7 @@ def addfile(adcookies,adtoken):
     burp0_url = "https://"+host+":443/admin/index.php?route=catalog/download&user_token="+adtoken
     r_check=session.get(burp0_url, headers=burp0_headers, cookies=burp0_cookies,allow_redirects=False,verify=False)
     print("add download file")
-    print(r_check.text)
+    #print(r_check.text)
     return r_check
     #print(r.status_code)
     #print(r.text)
