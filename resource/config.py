@@ -4,7 +4,7 @@ import requests
 from requests_toolbelt.multipart.encoder import MultipartEncoder
 requests.packages.urllib3.disable_warnings()
 #path = os.path.abspath(os.path.dirname(sys.argv[0]))
-path = './/'
+path = '../resource/'
 host = "web"
 
 def loginad():
@@ -367,9 +367,9 @@ def check_config():
                      "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9",
                      "Referer": "http://" + host + ":80",
                      "Accept-Encoding": "gzip, deflate", "Accept-Language": "zh-CN,zh;q=0.9", "Connection": "close"}
-    r = requests.get(burp0_url, headers=burp0_headers, cookies=burp0_cookies)
+    r = requests.get(burp0_url, headers=burp0_headers, cookies=burp0_cookies,verify=False)
     #print("check_config")
-    print(r.text)
+    #print(r.text)
     
     return r
 
