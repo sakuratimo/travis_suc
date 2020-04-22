@@ -47,7 +47,7 @@ def loginad():
 
 def adddatefile():
     filename='datafill.sql'
-    filepath=path+'//datafill.sql'
+    filepath=path+'datafill.sql'
     multipart_encoder = MultipartEncoder(
         fields={
             "import": (
@@ -64,8 +64,10 @@ def adddatefile():
     
     r=requests.post(burp0_url, headers=burp0_headers, cookies=burp0_cookies,data=burp0_data,verify=False)
     print("add file")
+    print(burp0_data)
     print(r.text)
     datetoken=r.text[-25:-16]
+    print(datetoken)
     return {'datetoken':datetoken}
 
 
@@ -77,12 +79,15 @@ def sure():
     burp0_url = "https://"+host+":443/admin/index.php?route=tool/backup/import&user_token="+adtoken+"&import=/bitnami/"+host+"/system/storage/upload/"+datetoken+"&position=8688"
     burp0_cookies = {"__atuvc": "1%7C12%2C0%7C13%2C1%7C14", "currency": "USD", "language": "zh-cn", "OCSESSID": adcookies}
     burp0_headers = {"Referer": "https://"+host+"/admin/index.php?route=tool/backup&user_token="+adtoken, "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Safari/537.36 Edge/18.17763", "Accept": "application/json, text/javascript, */*; q=0.01", "Accept-Language": "en-US,en;q=0.8,zh-Hans-CN;q=0.5,zh-Hans;q=0.3", "X-Requested-With": "XMLHttpRequest", "Accept-Encoding": "gzip, deflate", "Connection": "close"}
-    requests.get(burp0_url, headers=burp0_headers, cookies=burp0_cookies,verify=False)
+    r=requests.get(burp0_url, headers=burp0_headers, cookies=burp0_cookies,verify=False)
+    print(r.text)
+
 
 
 
     burp0_url = "https://"+host+":443/admin/index.php?route=tool/backup/import&user_token="+adtoken+"&import=/bitnami/"+host+"/system/storage/upload/"+datetoken+"&position=22122"
-    requests.get(burp0_url, headers=burp0_headers, cookies=burp0_cookies,verify=False)
+    r=requests.get(burp0_url, headers=burp0_headers, cookies=burp0_cookies,verify=False)
+    print(r.text)
 
 
 
@@ -363,7 +368,7 @@ def check_config():
                      "Referer": "http://" + host + ":80",
                      "Accept-Encoding": "gzip, deflate", "Accept-Language": "zh-CN,zh;q=0.9", "Connection": "close"}
     r = requests.get(burp0_url, headers=burp0_headers, cookies=burp0_cookies)
-    print("check_config")
+    #print("check_config")
     print(r.text)
     
     return r
