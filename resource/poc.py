@@ -1,7 +1,7 @@
 import requests
 import urllib3
 requests.packages.urllib3.disable_warnings()
-host = "opencart22"
+host = "opencart"
 
 def loginad():
     session = requests.session()
